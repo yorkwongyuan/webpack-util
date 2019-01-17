@@ -5,7 +5,7 @@ let srcPath = path.resolve(__dirname, '../src');
 module.exports = {
     context: path.resolve(__dirname, '../'),
     resolve:{
-        extension:['js'],
+        extensions:['js'],
         alias:{
             '@': srcPath
         }

@@ -1,20 +1,20 @@
 const path = require("path");
-const {getIp} = require("../build/util");
+const { getIp } = require("../build/util");
 
-const distPath = path.resolve(__dirname,"../dist");
+const distPath = path.resolve(__dirname, "../dist");
 
 let config = {
-    build:{
-        main:"./src/index",
-        assetsRoot:distPath,
+    build: {
+        main: path.resolve(__dirname, '../src/index.js'),
+        assetsRoot: distPath,
         devtool: 'source-map'
     },
     dev: {
-        main: "./example/src/index",
+        main: path.resolve(__dirname, "../example/src/index.js"),
         assetsRoot: distPath,
         devtool: 'eval-source-map',
-        assetsPublicPath:"/",
-        assetsSubDirectory:"",
+        assetsPublicPath: "/",
+        assetsSubDirectory: "",
         host: getIp(),
         port: 8888
     }
